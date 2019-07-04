@@ -1,0 +1,6 @@
+---
+:queues:
+  - tracker_platform_producer_events
+  - tracker_platform_consumer_events
+  - tracker_tenant_producer_events
+  - tracker_tenant_consumer_events
