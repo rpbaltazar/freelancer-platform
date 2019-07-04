@@ -1,0 +1,8 @@
+source "https://rubygems.org"
+
+gem 'ros_sdk', path: '../../ros/lib/sdk'
+gem 'pry'
+gem 'awesome_print'
+
+# Specify your gem's dependencies in freelancer_sdk.gemspec
+gemspec

@@ -1,0 +1,42 @@
+# Configuration values defined here override any values defined in platform.yml
+---
+infra:
+  config:
+    type: instance
+    # Uncomment and set values to a hostname that is mapped to this machine
+    # to enable public access to this installation
+    # dns:
+    #   domain: rails-on-services.org
+    #   subdomain: ros
+  environment:
+    nginx_host_port: 3000
+
+core:
+  services:
+    fluentd:
+      enabled: no
+    localstack:
+    nginx:
+    postgres:
+    redis:
+    sftp:
+      environment:
+        bucket_endpoint_url: http://localstack:4572
+        bucket_name: blah
+        aws_access_key_id: hello
+        aws_secret_access_key: hello
+    wait:
+
+platform:
+  environment:
+    redis_url: redis://redis:6379
+    platform:
+      request_logging:
+        enabled: no
+      system_logging:
+        enabled: no
+  services:
+    cognito:
+      profiles: ['server']
+    comm:
+      profiles: ['server']

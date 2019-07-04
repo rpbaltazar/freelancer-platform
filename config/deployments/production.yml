@@ -1,0 +1,25 @@
+# Configuration values defined here override any values defined in platform.yml
+---
+infra:
+  config:
+    dns:
+      domain: example.org
+      subdomain: cool-project
+
+core:
+  services:
+    ingress:
+
+platform:
+  config:
+    image:
+      # NOTE: for production set rails_env to production
+      build_args:
+        rails_env: development
+  services:
+    cognito:
+      profiles: ['server']
+    comm:
+      profiles: ['server']
+    iam:
+      profiles: ['server']
