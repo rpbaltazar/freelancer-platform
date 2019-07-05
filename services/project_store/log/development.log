@@ -18,6 +18,10 @@ DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `paren
 DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from configure at /home/vagrant/dev/freelancer/ros/lib/sdk/lib/ros_sdk/sdk.rb:72)
 DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from configure at /home/vagrant/dev/freelancer/ros/lib/sdk/lib/ros_sdk/sdk.rb:73)
 DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from configure at /home/vagrant/dev/freelancer/ros/lib/sdk/lib/ros_sdk/sdk.rb:74)
+DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from configure at /home/vagrant/dev/freelancer/ros/lib/sdk/lib/ros_sdk/sdk.rb:70)
+DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from configure at /home/vagrant/dev/freelancer/ros/lib/sdk/lib/ros_sdk/sdk.rb:72)
+DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from configure at /home/vagrant/dev/freelancer/ros/lib/sdk/lib/ros_sdk/sdk.rb:73)
+DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from configure at /home/vagrant/dev/freelancer/ros/lib/sdk/lib/ros_sdk/sdk.rb:74)
 DEPRECATION WARNING: Initialization autoloaded the constants ApiBelongsTo, Ros::ApplicationRecordConcern, ApplicationRecord, Ros::TenantConcern, and Tenant.
 
 Being able to do this is deprecated. Autoloading during initialization is going
@@ -30,4 +34,4 @@ the expected changes won't be reflected in that stale Module object.
 These autoloaded constants have been unloaded.
 
 Please, check the "Autoloading and Reloading Constants" guide for solutions.
- (called from <main> at /home/vagrant/dev/freelancer/services/project-store/config/environment.rb:5)
+ (called from <main> at /home/vagrant/dev/freelancer/services/project_store/config/environment.rb:5)
