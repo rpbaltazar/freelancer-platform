@@ -1,0 +1,6 @@
+---
+:queues:
+  - project_store_platform_producer_events
+  - project_store_platform_consumer_events
+  - project_store_tenant_producer_events
+  - project_store_tenant_consumer_events
