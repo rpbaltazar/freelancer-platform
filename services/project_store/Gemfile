@@ -54,8 +54,8 @@ gem 'ros_sdk', path: '../../ros/lib/sdk'
 group :development do
 end
 
-gem 'freelancer-core', path: '/home/vagrant/dev/freelancer/lib/core'
-gem 'freelancer_sdk', path: '/home/vagrant/dev/freelancer/lib/sdk'
+gem 'freelancer-core', path: '../../lib/core'
+gem 'freelancer_sdk', path: '../../lib/sdk'
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'

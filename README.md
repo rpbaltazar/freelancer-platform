@@ -119,13 +119,13 @@ Based on this, the suggested microservices as of now are:
 | Microservice | Messages sent | Listening to |
 | front | `resource:project`, `store:list, resource:project` | |
 | project | `store:save, resource:project`, `info:project` | `resource:project` |
-| project-store | | `store:list, resource:project`, `store:save, resource:project` |
+| project_store | | `store:list, resource:project`, `store:save, resource:project` |
 
 TODO: Add diagram of MS and events sent
 
 `front` will be responsible for translating the HTTP Requests into our internal message system
 `project` will be responsible for manipulating the `front`'s message and:
-  1. inform the `project-store` that a record needs to be stored
-  2. notify the system once the `project-store` is done with the saving
-`project-store` will be in charge of communicating with the database, storing the projects or
+  1. inform the `project_store` that a record needs to be stored
+  2. notify the system once the `project_store` is done with the saving
+`project_store` will be in charge of communicating with the database, storing the projects or
 fetching them depending on the message received
