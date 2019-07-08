@@ -36,7 +36,7 @@ Following the book The Tao of Microservices, answering the initial questions sho
 
 ### FF-1&2
 
-The plaform lets the user create a new project and view a list of his own projects
+The platform lets the user create a new project and view a list of his own projects
 
 What activities happen in the system?
 - Creating a project
@@ -47,11 +47,11 @@ Transforming these activities into messages:
 
 ```json
 {
-  resource: 'project',
-  user: 'freelancer1',
-  project_name: 'Project 1',
-  hourly_rate: '10',
-  currency: 'USD',
+  "resource": "project",
+  "user": "freelancer1",
+  "project_name": "Project 1",
+  "hourly_rate": "10",
+  "currency": "USD",
 }
 ```
 
@@ -59,9 +59,9 @@ Transforming these activities into messages:
 
 ```json
 {
-  store: 'list',
-  resource: 'project',
-  user: 'freelancer1'
+  "store": "list",
+  "resource": "project",
+  "user": "freelancer1"
 }
 ```
 
@@ -70,33 +70,33 @@ As for the remaining CRUD for projects, we can most likely follow similar messag
 1. Fetch one project
 ```json
 {
-  store: 'load',
-  resource: 'project',
-  user: 'freelancer1',
-  id: '1'
+  "store": "load",
+  "resource": "project",
+  "user": "freelancer1",
+  "id": "1"
 }
 ```
 
 2. Save one project. In this case id is optional, and the associated operation should create or update depending on the presence of the id
 ```json
 {
-  store: 'save',
-  resource: 'project',
-  user: 'freelancer1',
-  id: '1',
-  project_name: 'project 1',
-  hourly_rate: '10',
-  currency: 'USD'
+  "store": "save",
+  "resource": "project",
+  "user": "freelancer1",
+  "id": "1",
+  "project_name": "project 1",
+  "hourly_rate": "10",
+  "currency": "USD"
 }
 ```
 
 3. Remove one project
 ```json
 {
-  store: 'destroy',
-  resource: 'project',
-  user: 'freelancer1',
-  id: '1'
+  "store": "destroy",
+  "resource": "project",
+  "user": "freelancer1",
+  "id": "1"
 }
 ```
 
@@ -104,7 +104,7 @@ Finally, as a rule of thumb we should announce to the whole system that somethin
 
 ```json
 {
-  info: 'project'
+  "info": "project"
 }
 ```
 
