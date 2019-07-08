@@ -117,9 +117,9 @@ Finally, as a rule of thumb we should announce to the whole system that somethin
 Based on this, the suggested microservices as of now are:
 
 | Microservice | Messages sent | Listening to |
-| front | `resource:project`, `store:list, resource:project` | |
+| front | `resource:project`, `store:list, resource:project` | - |
 | project | `store:save, resource:project`, `info:project` | `resource:project` |
-| project_store | | `store:list, resource:project`, `store:save, resource:project` |
+| project_store | - | `store:list, resource:project`, `store:save, resource:project` |
 
 TODO: Add diagram of MS and events sent
 
