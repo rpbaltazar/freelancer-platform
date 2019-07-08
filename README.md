@@ -111,12 +111,14 @@ Finally, as a rule of thumb we should announce to the whole system that somethin
 #### What interactions happen?
 
 | Activity | Message Flow |
-| Create Project | `resource:project`, `store:save, resource:project`, `info:project`
-| List Projects | `store:list. resource:project`
+| -------- | ------------ |
+| Create Project | `resource:project`, `store:save, resource:project`, `info:project` |
+| List Projects | `store:list resource:project` |
 
 Based on this, the suggested microservices as of now are:
 
 | Microservice | Messages sent | Listening to |
+| ------------ | ------------- | ------------ |
 | front | `resource:project`, `store:list, resource:project` | - |
 | project | `store:save, resource:project`, `info:project` | `resource:project` |
 | project_store | - | `store:list, resource:project`, `store:save, resource:project` |
