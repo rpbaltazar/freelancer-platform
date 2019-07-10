@@ -117,3 +117,7 @@ platform:
       # if enabled then either the ALB or the SG needs to permit the SFTP port
       # If localstack include that in COMPIOSE_FILE in .env
       # If S3 then when calling ros infra:provision it writes a value to tfvars that has TF create the S3 bucket
+    project_store:
+      enabled: yes
+      mount: yes
+      profiles: ['server']

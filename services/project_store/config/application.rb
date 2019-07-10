@@ -35,21 +35,25 @@ module ProjectStore
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
-  config.generators do |g|
-    g.test_framework :rspec, fixture: true
-    g.fixture_replacement :factory_bot, dir: 'spec/factories'
-  end
+    config.generators do |g|
+      g.test_framework :rspec, fixture: true
+      g.fixture_replacement :factory_bot, dir: 'spec/factories'
+    end
 
-  initializer :console_methods do |app|
-    # TODO: Test that this works for factories
-    Ros.config.factory_paths += Dir[Pathname.new(__FILE__).join('../spec/factories')]
-    Ros.config.model_paths += config.paths['app/models'].expanded
-  end if Rails.env.development?
+    if Rails.env.development?
+      initializer :console_methods do |_app|
+        # TODO: Test that this works for factories
+        Ros.config.factory_paths += Dir[Pathname.new(__FILE__).join('../spec/factories')]
+        Ros.config.model_paths += config.paths['app/models'].expanded
+      end
+    end
 
-  initializer :service_values do |app|
-    name = self.class.name.split('::').first
-    Settings.service['name'] = name.downcase
-    Settings.service['policy_name'] = name
-  end
+    initializer :service_values do |_app|
+      name = self.class.name.split('::').first
+      Settings.service['name'] = name.downcase
+      Settings.service['policy_name'] = name
+    end
+
+    # config.hosts << "project_store"
   end
 end

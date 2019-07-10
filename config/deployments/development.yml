@@ -35,6 +35,7 @@ platform:
         enabled: no
       system_logging:
         enabled: no
+      hosts: project_store
   services:
     cognito:
       profiles: ['server']

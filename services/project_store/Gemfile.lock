@@ -1,4 +1,15 @@
 PATH
+  remote: ../../lib/core
+  specs:
+    freelancer-core (0.1.0)
+      rails (~> 6.0.0.rc1)
+
+PATH
+  remote: ../../lib/sdk
+  specs:
+    freelancer_sdk (0.1.0)
+
+PATH
   remote: ../../ros/lib/core
   specs:
     ros-core (0.1.0)
@@ -30,17 +41,6 @@ PATH
       json_api_client (= 1.9.0)
       jwt (= 2.1.0)
       pry (= 0.12.2)
-
-PATH
-  remote: /home/vagrant/dev/freelancer/lib/core
-  specs:
-    freelancer-core (0.1.0)
-      rails (~> 6.0.0.rc1)
-
-PATH
-  remote: /home/vagrant/dev/freelancer/lib/sdk
-  specs:
-    freelancer_sdk (0.1.0)
 
 GEM
   remote: https://rubygems.org/
